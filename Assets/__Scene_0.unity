@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -190,6 +190,26 @@ PrefabInstance:
         type: 3}
       propertyPath: _type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: def.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: def.color.b
+      value: 0.7471075
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: def.color.g
+      value: 0.7471075
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: def.color.r
+      value: 0.9716981
       objectReference: {fileID: 0}
     - target: {fileID: 8456642093769543252, guid: ae4feb5a0d0624529b1f5beb5cbea392,
         type: 3}
@@ -550,8 +570,8 @@ MonoBehaviour:
     projectileColor: {r: 0.007843138, g: 0.9607844, b: 0.9960785, a: 1}
     damageOnHit: 5
     continuousDamage: 0
-    delayBetweenShots: 0.25
-    velocity: 50
+    delayBetweenShots: 0.3
+    velocity: 45
   - type: 6
     letter: 0
     color: {r: 0.08235294, g: 0.9725491, b: 0.019607844, a: 1}
@@ -632,6 +652,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: _type
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: def.type
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8456642093769543252, guid: ae4feb5a0d0624529b1f5beb5cbea392,
         type: 3}
       propertyPath: m_Name
@@ -700,6 +730,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: _type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: def.type
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8456642093769543252, guid: ae4feb5a0d0624529b1f5beb5cbea392,
         type: 3}
@@ -1137,6 +1177,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3923796494938685823, guid: ae4feb5a0d0624529b1f5beb5cbea392,
+        type: 3}
+      propertyPath: def.type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8456642093769543252, guid: ae4feb5a0d0624529b1f5beb5cbea392,
         type: 3}
       propertyPath: m_Name
@@ -1401,7 +1446,7 @@ MonoBehaviour:
   gameRestartDelay: 2
   projectilePrefab: {fileID: 1899541879965282, guid: 59a4640edad59f94a87c1d235355cb6a,
     type: 3}
-  projectileSpeed: 40
+  projectileSpeed: 35
   weapons:
   - {fileID: 1794608309}
   - {fileID: 1854078992}
