@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// This is an enum of the various possible weapon types.
@@ -49,6 +51,8 @@ public class Weapon : MonoBehaviour
     private GameObject weaponModel;
     private Transform shotPointTransform;
 
+
+    public TextMeshProUGUI Status; 
     //private Renderer collarRend;
 
     private void Start()
@@ -68,7 +72,9 @@ public class Weapon : MonoBehaviour
         // Call SetType() for the default _type of WeaponType.none
         SetType(_type);
 
+        SetStatus();
 
+      
 
 
         // Find the fireDelegate of the root GameObject
@@ -78,6 +84,8 @@ public class Weapon : MonoBehaviour
         if (hero != null) hero.fireEvent += Fire;
 
     }
+
+    
 
     public eWeaponType type
     {
@@ -114,6 +122,10 @@ public class Weapon : MonoBehaviour
         weaponModel.transform.localScale = Vector3.one;
 
         nextShotTime = 0; // You can fire immediately after _type is set.
+    }
+    void SetStatus()
+    {
+        status.text = "Current Weapon: " + return (_type);
     }
 
     public void Fire()

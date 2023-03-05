@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class Hero : MonoBehaviour {
     static public Hero S { get; private set; } // Singleton
 
@@ -27,7 +28,10 @@ public class Hero : MonoBehaviour {
     // Create a WeaponFireDelegate field named fireDelegate.
     public WeaponFireDelegate fireEvent;
 
-	void Awake()
+    public TextMeshProUGUI score;
+    private int count;
+
+    void Awake()
     {
         if (S == null)
         {
@@ -43,7 +47,11 @@ public class Hero : MonoBehaviour {
         ClearWeapons();
         weapons[0].SetType(eWeaponType.blaster);
     }
-	
+	void Start()
+    {
+        count = 0;
+        SetScore();
+    }
 	// Update is called once per frame
 	void Update()
     {
