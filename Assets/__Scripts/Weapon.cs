@@ -96,6 +96,7 @@ public class Weapon : MonoBehaviour
         set
         {
             SetType(value);
+            
         }
     }
 
@@ -125,7 +126,8 @@ public class Weapon : MonoBehaviour
     }
     void SetStatus()
     {
-        status.text = "Current Weapon: " + return (_type);
+        
+        Status.text = "Current Weapon: " + Weapon.type;
     }
 
     public void Fire()

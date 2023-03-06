@@ -15,6 +15,7 @@ public class Hero : MonoBehaviour {
     public GameObject projectilePrefab;
     public float projectileSpeed = 40;
     public Weapon[] weapons;
+    public Scorecounter scoreCounter;
 
     [Header("Dynamic")] [Range(0,4)]
     
@@ -47,11 +48,14 @@ public class Hero : MonoBehaviour {
         ClearWeapons();
         weapons[0].SetType(eWeaponType.blaster);
     }
-	void Start()
-    {
-        count = 0;
-        SetScore();
-    }
+	
+        void Start()
+        {
+            GameObject Score = GameObject.Find("Scorecounter");         // b
+                                                                        // Get the ScoreCounter (Script) component of scoreGO
+            scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+        }
+    
 	// Update is called once per frame
 	void Update()
     {
