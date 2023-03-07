@@ -29,8 +29,7 @@ public class Hero : MonoBehaviour {
     // Create a WeaponFireDelegate field named fireDelegate.
     public WeaponFireDelegate fireEvent;
 
-    public TextMeshProUGUI score;
-    private int count;
+    
 
     void Awake()
     {
@@ -51,9 +50,9 @@ public class Hero : MonoBehaviour {
 	
         void Start()
         {
-            GameObject Score = GameObject.Find("Scorecounter");         // b
+            //GameObject Score = GameObject.Find("Scorecounter");         // b
                                                                         // Get the ScoreCounter (Script) component of scoreGO
-            scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+           // scoreCounter = Score.GetComponent<TextMeshProUGUI>();
         }
     
 	// Update is called once per frame

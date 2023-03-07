@@ -6,13 +6,13 @@ using TMPro;
 public class Scorecounter : MonoBehaviour
 {
     [Header("Dynamic")]                                                          // b
-    public int points = 0;
+    public static int points = 0;
 
-    private TextMeshProGUI Score;                                                        // c
+    private TextMeshProUGUI Score;                                                        // c
 
     void Start()
     {
-        points = GetComponent<Score>;                                           // d
+        Score = GetComponent<TextMeshProUGUI>();                                           // d
     }
 
     void Update()

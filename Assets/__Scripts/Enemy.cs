@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 [RequireComponent(typeof(BoundsCheck))]
 public class Enemy : MonoBehaviour
@@ -54,7 +55,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-
+    
 
     void Update()
     {
@@ -97,7 +98,7 @@ public class Enemy : MonoBehaviour
                         Main.SHIP_DESTROYED(this);
                     }
                     Destroy(this.gameObject);
-                    scorecounter.points += score;
+                    Scorecounter.points += score;
                 }
             }
             // Destroy the projectile regardless

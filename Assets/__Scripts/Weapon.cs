@@ -28,6 +28,7 @@ public enum eWeaponType
 [System.Serializable]
 public class WeaponDefinition
 {
+    public string weapontext;
     public eWeaponType type = eWeaponType.none;
     public string letter; // Letter to show on the power-up
     public Color color = Color.white; // Color of Collar & power-up
@@ -55,7 +56,7 @@ public class Weapon : MonoBehaviour
     public TextMeshProUGUI Status; 
     //private Renderer collarRend;
 
-    private void Start()
+    private void Awake()
     {
         //collar = transform.Find("Collar").gameObject;
         //collarRend = collar.GetComponent<Renderer>();
@@ -68,11 +69,11 @@ public class Weapon : MonoBehaviour
         }
 
         shotPointTransform = transform.GetChild(0);  //There is only one chile and it is what we need
-
+        Status = GameObject.Find("Status").GetComponent<TextMeshProUGUI>();
         // Call SetType() for the default _type of WeaponType.none
         SetType(_type);
 
-        SetStatus();
+        
 
       
 
@@ -122,12 +123,17 @@ public class Weapon : MonoBehaviour
         weaponModel.transform.localPosition = Vector3.zero;
         weaponModel.transform.localScale = Vector3.one;
 
+        if (def.type != eWeaponType.none)
+        {
+            SetStatus();
+        }
+        
         nextShotTime = 0; // You can fire immediately after _type is set.
     }
     void SetStatus()
     {
         
-        Status.text = "Current Weapon: " + Weapon.type;
+        Status.text = "Current Weapon: " + def.weapontext;
     }
 
     public void Fire()
